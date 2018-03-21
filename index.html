@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Wiki Machine</title>
-    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.orange-deep_orange.min.css"/>
+    <link rel="stylesheet" href="styles.css" type="text/css"/>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -12,13 +15,23 @@
     <script src="script.js"></script>
 </head>
 <body id="index" class="home">
-<h1>Gimme Some Wiki!</h1>
-<a href="https://en.wikipedia.org/wiki/Special:Random">Take me to a random Wiki</a>
+<header>
+    <h1>Gimme Some Wiki!</h1>
+    <a href="https://en.wikipedia.org/wiki/Special:Random" class="mdl-typography--display-1 mdl-typography--display-1-color-contrast">Surprise Me!</a>
+</header>
+
 <form>
-    <input type="text" value=""><br>
-    <span class="error" style="display: none;">Enter a search term</span>
-    <button type="submit">Search</button>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label">
+        <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+            <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+            <input class="mdl-textfield__input" type="text" name="sample" placeholder="" id="fixed-header-drawer-exp" />
+        </div>
+    </div>
 </form>
-<ul></ul>
+<span class="error" style="display: none;">Enter a search term</span>
+
+<ul class="demo-list-icon mdl-list"></ul>
 </body>
 </html>
